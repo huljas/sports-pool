@@ -1,0 +1,14 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<h1>Futis Veikkaus</h1>
+
+<div>
+    #{list items:groups, as:'group'}
+    <h2>${group.name}</h2>
+        #{list items:group.teams, as:'team'}
+            <h3>${team.name}</h3>
+        #{/list}
+    #{/list}
+
+</div>
