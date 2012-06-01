@@ -1,14 +1,32 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
-<h1>Futis Veikkaus</h1>
+<h1>Sports Pool</h1>
 
-<div>
-    #{list items:groups, as:'group'}
-    <h2>${group.name}</h2>
-        #{list items:group.teams, as:'team'}
-            <h3>${team.name}</h3>
-        #{/list}
+<h2>Current standings</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr><th>Name</th><th>Score</th></tr>
+    </thead>
+    <tbody>
+    #{list items:players, as:'player'}
+    <tr><td>${player.name}</td><td>${player.score}</td></tr>
     #{/list}
+    </tbody>
+</table>
 
-</div>
+<h2>Qualifier groups</h2>
+
+#{list items:groups, as:'group'}
+<h3>${group.name}</h3>
+    <table class="table table-striped">
+        <tbody>
+            #{list items:group.teams, as:'team'}
+            <tr><td>${team.name}</td><td>${team.points}</td></tr>
+            #{/list}
+        </tbody>
+    </table>
+#{/list}
+
+<h2>Final</h2>

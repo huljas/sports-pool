@@ -1,0 +1,27 @@
+Player(heikki):
+    name: Heikki
+
+Player(ohto):
+    name: Ohto
+
+GroupQualifiersBet(heikki_q_A):
+    player: heikki
+    groupName: Group A
+    first: Czech Rep.
+    second: Greece
+
+GroupQualifiersBet(ohto_q_A):
+    player: ohto
+    groupName: Group A
+    first: Greece
+    second: Czech Rep.
+
+FinalistsBet(heikki_f):
+    player: heikki
+    first: Greece
+    second: Sweden
+
+FinalistsBet(ohto_f):
+    player: ohto
+    first: Greece
+    second: Sweden

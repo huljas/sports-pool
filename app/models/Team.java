@@ -5,19 +5,22 @@ import play.db.jpa.JPABase;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * @author exthulja
  */
-@Entity
-public class Team extends JPABase {
-
-    @Id
-    public Long id;
-
+public class Team {
 
     public String name;
+    public int position;
+    public String movement;
+    public String url;
+    public int played;
+    public int points;
 
-    @ManyToOne
-    public Group group;
+    public static List<Team> getFinalists() {
+        return Collections.emptyList();
+    }
 }
